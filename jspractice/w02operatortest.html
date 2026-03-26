@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript Operators</h1>
+<h2>The + Operator</h2>
+<h3>The in operator</h3>
+
+
+<p id="demo"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+
+<script>
+
+//The + operator concatenates (adds) strings
+
+let text1 = "Good ";
+let text2 = "Morning";
+let text3 = text1 + text2;
+document.getElementById("demo").innerHTML = text3;
+
+//The typeof operator returns the type of a variable, object, function or expression
+
+document.getElementById("demo2").innerHTML = 
+"'John' is " + typeof "John" + "<br>" +
+"3.14 is " + typeof 3.14 + "<br>" +
+"NaN is " + typeof NaN + "<br>" +
+"false is " + typeof false + "<br>" +
+"[1, 2, 3, 4] is " + typeof [1, 2, 3, 4] + "<br>" +
+"{name:'John', age:34} is " + typeof {name:'John', age:34} + "<br>" +
+"new Date() is " + typeof new Date() + "<br>" +
+"function () {} is " + typeof function () {} + "<br>" +
+"myCar is " + typeof myCar + "<br>" +
+"null is " + typeof null;
+
+//The in operator returns true if a property is in an object, otherwise false:
+
+const person = {firstName:"John", lastName:"Doe", age:50};
+document.getElementById("demo3").innerHTML =
+("firstName" in person) + "<br>" +
+("age" in person) + "<br>" +
+("address" in person);
+</script>
+
+
+</body>
+</html>
+
+
+<!--
+    The delete operator deletes both the value of the property and the property itself.
+    The delete operator is designed to be used on object properties. It has no effect on 
+    variables or functions.
+
+    The delete operator should not be used on the properties of any predefined JavaScript 
+    objects (Array, Boolean, Date, Function, Math, Number, RegExp, and String).
+    This can crash your application.
+
+  const person = {
+  firstName:"John",
+  lastName:"Doe",
+  age:50,
+  eyeColor:"blue"
+};
+delete person.age;
+    
+    
+    Arithmatic in Javascript
+
+Arithmetic operators are used to perform arithmetic between 
+variables and/or values.
+
+oper   Name              Example     results
++	     Addition	         x = y + 2	 y=5, x=7	
+-	     Subtraction	     x=y-2	     y=5, x=3	
+*	     Multiplication	   x=y*2	     y=5, x=10	
+**	   Exponentiation    x=y**2	     y=5, x=25	
+/	     Division	         x = y / 2	 y=5, x=2.5	
+%	     Remainder	       x = y % 2	 y=5, x=1	
+++	    Pre increment	   x = ++y	   y=6, x=6	
+++	    Post increment	 x = y++	   y=6, x=5	
+--	    Pre decrement	   x = --y	   y=4, x=4	
+--	    Post decrement	 x = y--	   y=4, x=5
+
+Assignment operators are used to assign values to JavaScript variables.
+
+Oper	Example	 Same As	      Result	
+=	    x = y	   x = y	        x = 5	
++=	  x += y	 x = x + y	    x = 15	
+-=	  x -= y	 x = x - y	    x = 5	
+*=	  x *= y	 x = x * y	    x = 50	
+/=	  x /= y	 x = x / y	    x = 2	
+%=	  x %= y	 x = x % y	    x = 0	
+:	    x: 45	   size.x = 45    x = 45
+
+Comparison operators are used in logical statements to determine 
+equality or difference between variables or values.
+
+Oper	Name	                    Comparing	    Returns	
+==	    equal to	                x == 8	    false	
+==	    equal to	                x == 5	    true	
+===	    equal value and type	    x === "5"	  false	
+===	    equal value and type	    x === 5	    true	
+!=	    not equal	                x != 8	    true	
+!==	    not equal value or type	  x !== "5"	  true	
+!==	    not equal value or type	  x !== 5	    false	
+>	      greater than	            x > 8	      false	
+<	      less than	                x < 8	      true	
+>=	    greater or equal to	      x >= 8	    false	
+<=	    less or equal to	        x <= 8	    true
+
+Logical operators are used to determine the logic between variables or values.
+
+Oper	Name	Example
+&&	  AND	  (x < 10 && y > 1) is true	
+||	  OR	  (x === 5 || y === 5) is false	
+!	    NOT	  !(x === y) is true
+
+Bit operators work on 32 bits numbers. Any numeric operand in the operation is 
+converted into a 32 bit number. The result is converted back to a JavaScript number.
+
+Oper	Name	        Example	        Same as	        Result	    Decimal	
+&	    AND	            x = 5 & 1	    0101 & 0001	    0001	    1	
+|	    OR	            x = 5 | 1	    0101 | 0001	    0101	    5	
+~	    NOT	            x = ~ 5	      ~0101	          1010	    10	
+^	    XOR	            x = 5 ^ 1	    0101 ^ 0001	    0100	    4	
+<<	  Left shift	    x = 5 << 1	  0101 << 1	      1010	    10	
+>>	  Right shift	    x = 5 >> 1	  0101 >> 1	      0010	    2	
+>>>	  Unsigned right	x = 5 >>> 1	  0101 >>> 1	    0010	    2

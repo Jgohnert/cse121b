@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Javascript Project</title>
+    <script src='project.js' defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit&family=Roboto:wght@700&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='styles/projectstyles.css'>
+</head>
+<body>
+    <h1>Loan and Budget Calculator</h1>
+    <main>
+        <section>
+            <article>
+                <h2>Input Loan Information</h2>
+                <div>
+                    <label for='loan'>Loan amount</label>
+                    $<input type='text' id='loan' name='loan'>
+                </div>
+                <div>
+                    <label for='rate'>Annual interest rate</label>
+                    <input type='text' id='rate' name='rate'>%
+                </div>
+                <div>
+                    <label for='years'>Number of years</label>
+                    <input type='text' id='years' name='years'>
+                </div>
+                <div>
+                    <label for='payments'>Payments per year</label>
+                    <input type='text' id='payments' name='payments'>
+                </div>
+                <div>
+                    <input type='button' id='calculateLoan' value='Calculate Loan'>
+                </div>
+            </article>
+            <article>
+                <h2>Result</h2>
+                <div>
+                    <label for='PaymentsResult'>Number of payments</label>
+                    <input type='text' id='PaymentsResult' name='PaymentsResult' disabled>
+                </div>
+                <div>
+                    <label for='monthlyPaymentResult'>Monthly payments</label>
+                    $<input type='text' id='monthlyPaymentResult' name='monthlyPaymentResult' disabled>
+                </div>
+                <div>
+                    <label for='loanInterestResult'>Total cost</label>
+                    $<input type='text' id='loanInterestResult' name='loanInterestResult' disabled>
+                </div>
+                <div>
+                    <label for='loanExpenseResult'>Interest expense</label>
+                    $<input type='text' id='loanExpenseResult' name='loanExpenseResult' disabled>
+                </div>
+                <div>
+                    <label for='interestExpenseResult'>Monthly interest expense</label>
+                    $<input type='text' id='interestExpenseResult' name='interestExpenseResult' disabled>
+                </div>
+            </article>
+        </section>
+    </section>
+    <hr>
+    <section>
+        <article>
+            <h2>Input Budget information</h2>
+            <h3>Monthly Income</h3>
+            <div>
+                <label for='paycheck'>Paycheck</label>
+                $<input type='text' id='paycheck' name='paycheck'>
+            </div>
+            <h3>Monthly Expenses</h3>
+            <div>
+                <label for='monthlyLoanPayment'>Monthly loan payments</label>
+                $<input type='text' id='monthlyLoanPayment' name='monthlyLoanPayment' disabled>
+            </div>
+            <div>
+                <label for='tithing'>Tithing</label>
+                $<input type='text' id='tithing' name='tithing' placeholder='Seporate list with commas'>
+            </div>
+            <div>
+                <label for='groceries'>Groceries</label>
+                $<input type='text' id='groceries' name='groceries' placeholder='Seporate list with commas'>
+            </div>
+            <div>
+                <label for='gas'>Gas</label>
+                $<input type='text' id='gas' name='gas' placeholder='Seporate list with commas'>
+            </div>
+            <div>
+                <label for='phone'>Phone Payments</label>
+                $<input type='text' id='phone' name='phone' placeholder='Seporate list with commas'>
+            </div>
+            <div>
+                <label for='donations'>Donations</label>
+                $<input type='text' id='donations' name='donations' placeholder='Seporate list with commas'>
+            </div>
+            <div>
+                <label for='eatingOut'>Eating Out</label>
+                $<input type='text' id='eatingOut' name='eatingOut' placeholder='Seporate list with commas'>
+            </div>
+            <div>
+                <label for='entertainment'>Entertainment</label>
+                $<input type='text' id='entertainment' name='entertainment' placeholder='Seporate list with commas'>
+            </div>
+            <div>
+                <label for='taxes'>Taxes</label>
+                $<input type='text' id='taxes' name='taxes' placeholder='Seporate list with commas'>
+            </div>
+            <div>
+                <label for='Miscellaneous'>Miscellaneous</label>
+                $<input type='text' id='Miscellaneous' name='Miscellaneous' placeholder='Seporate list with commas'>
+            </div>
+            <div>
+                <input type='button' id='calculateExpense' value='Calculate monthly expenses'>
+            </div>
+        </article>
+        <article>
+            <h2>Result</h2>
+            <div>
+                <label for='monthlyTotalSpent'>Total Spent a Month</label>
+                $<input type='text' id='monthlyTotalSpent' name='monthlyTotalSpent' disabled>
+            </div>
+            <div>
+                <label for='moneySavedM'>Money saved each month</label>
+                $<input type='text' id='moneySavedM' name='moneySavedM' disabled>
+            </div>
+            <div>
+                <label for='moneySavedY'>Money saved each year</label>
+                $<input type='text' id='moneySavedY' name='moneySavedY' disabled>
+            </div>
+            <div>
+                <label for='annualIncome'>Annual Income</label>
+                $<input type='text' id='annualIncome' name='annualIncome' disabled>
+            </div>
+            <div>
+                <label for='annualExpense'>Annual Expenses</label>
+                $<input type='text' id='annualExpense' name='annualExpense' disabled>
+            </div>
+        </article>
+    </section>
+    </main>
+</body>
+</html>
