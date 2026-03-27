@@ -1,0 +1,9 @@
+section {
+    display: flex;
+    flex-direction: column;
+    padding: 0%;
+}
+
+section a {
+    margin-bottom: 10px;
+}

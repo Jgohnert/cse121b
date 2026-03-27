@@ -27,7 +27,7 @@ function newTask() {
   // add it to our arrays tasks
   // render out the list.
   const task = document.querySelector('#todo');
-  const newTask = {detaiol: task.value, completed: false };
+  const newTask = {detail: task.value, completed: false };
   tasks.push(newTask);
   task.value = '';
   renderTasks(tasks);
@@ -45,8 +45,10 @@ function removeTask(taskElement) {
 
 function completeTask(taskElement) {
   // In this case we need to find the index of the task so we can modify it.
+  const text = taskElement.querySelector('p').innerText;
+
   const taskIndex = tasks.findIndex(
-    (task) => task.detail === taskElement.childNodes[0].innerText
+    (task) => task.detail === text
   );
   // once we have the index we can modify the complete field.
   // tasks[taskIndex].completed ? false : true is a ternary expression.
@@ -62,7 +64,19 @@ function manageTasks(event) {
   console.log(event.target);
   console.log(event.currentTarget);
   // event.target will point to the actual icon clicked on. We need to get the parent li to work with however. HINT: Remember element.closest()? Look it up if you don't
+  const action = event.target.dataset.function;
 
+  // if they didn't click one of the icons, do nothing
+  if (!action) return;
+
+  // find the closest <li>
+  const taskElement = event.target.closest('li');
+
+  if (action === 'delete') {
+    removeTask(taskElement);
+  } else if (action === 'complete') {
+    completeTask(taskElement);
+  }
   // because we added 'data-function="delete"' to each icon in a task we can access a dataset property on our target
   // use that in a couple of if statements to decide whether to run removeTask or completeTask
 }
